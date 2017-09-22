@@ -2,7 +2,8 @@ const socket = io.connect('http://nodeprojects.me/');
 
 const connect = function (e) {
   e.preventDefault();
-  socket.emit('enterLobby', $('#username').val());
+  const username = $('#username').val();
+  socket.emit('enterLobby', username);
 };
 
 const handleConnection = function () {
