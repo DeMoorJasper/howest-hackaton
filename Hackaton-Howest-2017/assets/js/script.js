@@ -1,9 +1,9 @@
-const sendMessage = function(msg) {
+const sendMessage = (msg) => {
     socket.emit('newMessage', msg);
     console.log('Message sent');
 };  
 
-const triggerMsgEvent = function(e) {
+const triggerMsgEvent = (e) => {
     e.preventDefault();
     sendMessage($('#sendMsg #msg').val());
 };
@@ -14,11 +14,11 @@ const registerUserList = () => {
 
         let html = "<ul>";
         for (let i=0; i < data.length; i++) {
-            html += `<li>${data[i]}</li>`;
+            html += `<li>${ data[i] }</li>`;
         }
-        html += "<ul>"
+        html += "<ul>";
 
-        $("#userlist").html(data.join("<li>"))
+        let userlist = $("#userlist").html(html);
     });
 };
 
