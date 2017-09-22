@@ -1,11 +1,6 @@
 const sendMessage = function(msg) {
-    for (let i=0; i < 20; i++) {
-        var bericht = "Hey joske";
-        socket.emit('zegHallo', bericht);
-        console.log('send msg');
-    }
-    socket.emit('zegHallo', msg);
-    console.log(socket);
+    socket.emit('newMessage', msg);
+    console.log('Message sent');
 };  
 
 const triggerMsgEvent = function(e) {
@@ -13,8 +8,14 @@ const triggerMsgEvent = function(e) {
     sendMessage($('#sendMsg #msg').val());
 };
 
+const registerUserList = () => {
+    socket.on('updateUserList', (data) => {
+        console.log(data);
+    });
+}
+
 const registerMsgListener = function() {
-    socket.on('zegHallo',function(data){
+    socket.on('newMessage', (data) => {
         console.log(data);
     });
 };
@@ -22,4 +23,5 @@ const registerMsgListener = function() {
 $(() => {
     $('#sendMsg').on('submit', triggerMsgEvent);
     registerMsgListener();
+    registerUserList();
 });
