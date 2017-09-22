@@ -12,18 +12,21 @@
 </head>
 
 <body>
-    <div class="alert alert-info" role="alert">
+    
   <section class="startPannel">
+   <div class="alert alert-info" role="alert">
     <form action="#" method="post" id="enterLobby">
       <h1 class="text-center titel">Chatroom hackathon 2017</h1>
       <input type="text" id="username" placeholder="username" class="form-control gebruikersnaam">
       <input class="btn btn-primary lobby-btn" type="submit" value="Enter the lobby">
     </form>
-  </section>
 </div>
+  </section>
+
 
   <section class="lobby hide">
       <div class="row">
+<<<<<<< HEAD
       <div class="col-sm-4 blue">
         <h1>Users</h1>
         <section id="userlist">
@@ -33,21 +36,32 @@
       <div class="col-sm-8 yellow">    <section class="messages" id="messages">
           
               </section></div>
+=======
+      <div class="col-sm-4 gray">
+        <h1 class="text-center">Users</h1>
+        <section id="userlist" class="text-center no-bullet">
+          
+        </section>
+      </div>
+      <div class="col-sm-8 lightgray">    
+         <section class="messages" id="messages">
+          </section>
+          </div>
+>>>>>>> d917620c43af6b2f8b57aded7b79c55fac0c4004
       </div>
       <br>
       <div class="row">
       <div class="col-sm-2 gray"></div>
       <div class="col-sm-8 gray">    
         <section class="sendMsg">
-          <form action="#" method="post" id="sendMsg" class="form-control boodschap">
+          <form action="#" method="post" id="sendMsg" class="form-control lightgray">
             <input type="text" id="msg" placeholder="msg">
             <input class="btn" type="submit" value="Send Message">
           </form>
         </section></div>
       <div class="col-sm-2 gray"></div>
     </div>
-  </section>
-
+    </section>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="http://nodeprojects.me/socket.io/socket.io.js"></script>
   <script type="text/javascript" src="./assets/js/helperFunctions.js"></script>
