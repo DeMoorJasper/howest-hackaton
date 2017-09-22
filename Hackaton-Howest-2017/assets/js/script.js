@@ -11,8 +11,16 @@ const triggerMsgEvent = function(e) {
 const registerUserList = () => {
     socket.on('updateUserList', (data) => {
         console.log(data);
+
+        let html = "<ul>";
+        for (let i=0; i < data.length; i++) {
+            html += `<li>${data[i]}</li>`;
+        }
+        html += "<ul>"
+
+        $("#userlist").html(data.join("<li>"))
     });
-}
+};
 
 const registerMsgListener = function() {
     socket.on('newMessage', (data) => {

@@ -4,8 +4,6 @@ const connect = function (e) {
   e.preventDefault();
   const username = $('#username').val();
   socket.emit('enterLobby', username);
-  let user = 0;
-  socket.emit('enterLobby', username);
 };
 
 const handleConnection = function () {
