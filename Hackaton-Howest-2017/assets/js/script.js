@@ -24,7 +24,10 @@ const registerUserList = () => {
 
 const registerMsgListener = () => {
     socket.on('updateClients', (data) => {
-        
+        console.log(data);
+        let messages = $("#messages").html();
+        messages += `<p>${ data.user }: ${ data.msg }</p>`;
+        $("#messages").html(messages);
     });
 };
 
