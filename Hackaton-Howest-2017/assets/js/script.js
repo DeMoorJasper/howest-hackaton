@@ -10,8 +10,6 @@ const triggerMsgEvent = function(e) {
 
 const registerUserList = () => {
     socket.on('updateUserList', (data) => {
-        console.log(data);
-
         let html = "<ul>";
         for (let i=0; i < data.length; i++) {
             html += `<li>${data[i]}</li>`;
@@ -22,7 +20,7 @@ const registerUserList = () => {
     });
 };
 
-const registerMsgListener = function() {
+const registerMsgListener = () => {
     socket.on('newMessage', (data) => {
         console.log(data);
     });
