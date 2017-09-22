@@ -7,17 +7,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./assets/style/reset.css">
   <link rel="stylesheet" href="./assets/style/screen.css">
+  <link rel="stylesheet" href="./assets/style/bootstrap.min.css">
   <title>Chat client hackathon 2017</title>
 </head>
 
 <body>
-
+    <div class="alert alert-info" role="alert">
   <section class="startPannel">
     <form action="#" method="post" id="enterLobby">
-      <input type="text" id="username" placeholder="username">
-      <input class="btn" type="submit" value="Enter the lobby">
+      <h1 class="text-center titel">Chatroom hackathon 2017</h1>
+      <input type="text" id="username" placeholder="username" class="form-control gebruikersnaam">
+      <input class="btn btn-primary lobby-btn" type="submit" value="Enter the lobby">
     </form>
   </section>
+</div>
 
   <section class="lobby hide">
     <!--  HIER KOMT JULLIE HTML -->
@@ -36,7 +39,7 @@
   <script type="text/javascript" src="http://nodeprojects.me/socket.io/socket.io.js"></script>
   <script type="text/javascript" src="./assets/js/helperFunctions.js"></script>
   <script type="text/javascript" src="./assets/js/script.js"></script>
-
+  <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>

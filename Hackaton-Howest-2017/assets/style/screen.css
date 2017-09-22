@@ -1,3 +1,16 @@
 .hide {
   display: none;
 }
+.gebruikersnaam {
+  width:50% !important;
+  margin-left:25%;
+  margin-top:15%;
+}
+.lobby-btn {
+  margin-left:40%;
+  width:20%;
+  margin-top:10px;
+}
+.titel {
+  margin-top: 20px;
+}
