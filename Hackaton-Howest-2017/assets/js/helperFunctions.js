@@ -9,6 +9,7 @@ const handleConnection = function () {
   socket.on('connectionAccepted', () => {
     $('.startPannel').addClass('hide');
     $('.lobby').removeClass('hide');
+    console.log("Connected!");
   });
 
   socket.on('connectionDeclined', (err) => {
