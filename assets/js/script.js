@@ -5,7 +5,10 @@ const sendMessage = (msg) => {
 
 const triggerMsgEvent = (e) => {
     e.preventDefault();
-    sendMessage($('#sendMsg #msg').val());
+    let msg = $('#sendMsg #msg').val();
+    sendMessage(msg);
+    const username = $('#username').val();
+    addMessage(msg, username);
 };
 
 const registerUserList = () => {
@@ -22,12 +25,16 @@ const registerUserList = () => {
     });
 };
 
+const addMessage = (msg, user) => {
+    let messages = $("#messages").html();
+    messages += `<p>${ user }: ${ msg }</p>`;
+    $("#messages").html(messages);
+};
+
 const registerMsgListener = () => {
     socket.on('updateClients', (data) => {
         console.log(data);
-        let messages = $("#messages").html();
-        messages += `<p>${ data.user }: ${ data.msg }</p>`;
-        $("#messages").html(messages);
+        addMessage(data.msg, data.user);
     });
 };
 
